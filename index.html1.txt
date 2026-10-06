@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Pintu! ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff99bb, #ff6699);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 28px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .balloon-container {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+        .balloon {
+            width: 65px;
+            height: 80px;
+            background-color: #ff1a75;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            cursor: pointer;
+            position: relative;
+            box-shadow: inset -8px -8px 0 rgba(0,0,0,0.15), 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .balloon:hover {
+            transform: scale(1.12);
+        }
+        .balloon::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 31px;
+            width: 2px;
+            height: 15px;
+            background-color: #ffffff;
+        }
+        #messageCard {
+            background: rgba(255, 255, 255, 0.95);
+            color: #cc0066;
+            padding: 18px 22px;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            max-width: 450px;
+            display: none;
+            line-height: 1.5;
+        }
+        .purple-heart-msg {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #5900b3;
+            background: #f2e6ff;
+            padding: 15px;
+            border-radius: 10px;
+            display: none;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 Happy Birthday Pintu! 💖</h1>
+    <p>Tap the balloons below for a special surprise! ✨</p>
+
+    <div class="balloon-container">
+        <div class="balloon" onclick="showLove('Prathmesh')">Prathmesh</div>
+        <div class="balloon" onclick="showLove('Pavan')">Pavan</div>
+        <div class="balloon" onclick="showLove('Pintu')">Pintu</div>
+        <div class="balloon" onclick="showLove('Akdu')">Akdu</div>
+        <div class="balloon" onclick="showLove('Khadush')">Khadush</div>
+        <div class="balloon" onclick="showLove('Cardiologist')">Cardiologist</div>
+        <div class="balloon" onclick="showLove('Senior')">Senior</div>
+        <div class="balloon" onclick="showLove('Bab')">Bab</div>
+        <div class="balloon" onclick="showLove('Honey')">Honey</div>
+        <div class="balloon" onclick="showLove('Baby')">Baby</div>
+    </div>
+
+    <div id="messageCard"></div>
+    <div id="purpleCard" class="purple-heart-msg">
+        💜 Please always stay with me like koi pan situation ma mara sathe. Hu jayar sudhi jivu chu, rejho mara sathe like always support karva. Thank you, and like ik tamne mari care chhe pan batavo nai tame. Thank you hak thi khijhvava mate and hamesha mari kadar karva mate. Like koi bhul hoy ke koi divas pan naraz thav to please dur nai thata mara thi, mane tame always joyiye mara touch ma. And I love you bab, happy birthday! All your dreams come true, my love. 💜
+    </div>
+
+    <script>
+        function showLove(nickname) {
+            let card = document.getElementById('messageCard');
+            let purpleCard = document.getElementById('purpleCard');
+            
+            card.style.display = 'block';
+            purpleCard.style.display = 'block';
+            
+            card.innerHTML = `❤️ My Dear ${nickname},<br>I Love You So Much! Happy Birthday! 🎂✨`;
+        }
+    </script>
+
+</body>
+</html>
